@@ -106,6 +106,8 @@ const addEditCharacter = async (e) => {
     resetForm();
     document.querySelector(".dialog").classList.add("transparent");
     showCharacters();
+    let submitMsg = document.getElementById("submit-msg");
+    submitMsg.classList.remove("hidden");
 };
 
 const getTeam = () => {
@@ -127,7 +129,7 @@ const resetForm = () =>{
 
 const showHideAdd = (e) => {
     e.preventDefault();
-    document.querySelector(".dialog").classList.remove("hidden");
+    document.querySelector(".dialog").classList.remove("transparent");
     document.getElementById("add-edit-title").innerHTML = "Add Character";
     resetForm();
 };
